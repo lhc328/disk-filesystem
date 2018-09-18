@@ -23,7 +23,7 @@ public class DiskFileSystem {
     /**
      * @param args the command line arguments
      */
-    final static String Path = "./home";
+    final static String Path = "/home";
     static File file = new File("c.txt");
     static char[] buffer1 = new char[64];
     static Content[] buffer2 = new Content[8];

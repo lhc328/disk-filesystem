@@ -5,6 +5,7 @@
  */
 package diskfilesystem;
 
+import domain.Content;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.logging.Level;
@@ -50,11 +51,63 @@ public class OSControl {
             System.out.println("The count of opened file has been full that you cannot created file");
             return false;
         }
-        String[] namearray = name.split("/");
-        String[] pathname = null;
-        for (int i=0; i < namearray.length - 1; i++){
-            pathname[i] = namearray[i]; 
+        Content content = searchfile(name);
+        
+        try {
+            Scanner input = new Scanner(DiskFileSystem.file);
+            for(int i = 0;i < 2;i++){
+                DiskFileSystem.buffer1 = input.nextLine().toCharArray();
+            }
+            return true;
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(OSControl.class.getName()).log(Level.SEVERE, null, ex);
         }
-        String filename = namearray[namearray.length - 1];
+        return false;
+    }
+    
+    public static Content searchfile(String name){
+        Content content = new Content();
+        
+        
+        
+        return content;
+    }
+    
+    public static String readfile(String name){
+        String data = null;
+        Content content = searchfile(name);
+        
+        return data;
+    }
+    
+    public static boolean writefile(String name){
+        Content content = searchfile(name);
+        
+        return false;
+    }
+    
+    public static boolean openfile(String name){
+        Content content = searchfile(name);
+        
+        return false;
+    }
+    
+    public static boolean closefile(String name){
+        
+        
+        return false;
+    }
+    
+    public static boolean deletefile(String name){
+        return false;
+    }
+    
+    public static void deletenum(char num){
+        
+    }
+    
+    public static char addnum(char num){
+        char newnum = 129;
+        return newnum;
     }
 }
