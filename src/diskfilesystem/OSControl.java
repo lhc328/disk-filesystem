@@ -82,7 +82,7 @@ public class OSControl {
     
     public static boolean writefile(String name){
         Content content = searchfile(name);
-        
+        cin >> buffer1;
         return false;
     }
     
